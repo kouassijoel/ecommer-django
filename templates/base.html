@@ -191,9 +191,9 @@
                                                 {% endfor %}
                                             </ul>
                                         </li>
-                                        <li><a style="color:#1c1427" href="blog.html">Blog</a></li>
-                                        <li><a style="color:#1c1427" href="about.html">About</a></li>
-                                        <li><a style="color:#1c1427" href="contact.html">Contact</a></li>
+                                        <li><a style="color:#1c1427" href="#">Blog</a></li>
+                                        <li><a style="color:#1c1427" href="#">About</a></li>
+                                        <li><a style="color:#1c1427" href="#">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -222,16 +222,16 @@
                                         <span>{{item.variation_category | capfirst}} : {{item.variation_value | capfirst}}</span>
                                         {% endfor %}
                                     {% endif %}
-                                    <span>Price for each : ${{x.product.price}}</span>
+                                    <span>Price for each : {{x.product.price}}FRCFA</span>
                                     <span>Quantity : {{x.quantity}}</span>
-                                    <strong>${{x.sub_total}}</strong>
+                                    <strong>{{x.sub_total}}FCFA</strong>
                                 </div>
                             </div>
                             
                             {% endfor %}
                             
                             <div class="total">
-                                <span>total <strong>= ${{totalll}}</strong></span>
+                                <span>total <strong>= {{totalll}} FCFA</strong></span>
                             </div><br>
                             {% if '/cart/' not in request.path %}
                             <a style="background:#40394a;color:#f4cca4" class="out-menu" href="{% url 'cart:cart' %}">Go To Cart</a>
@@ -254,7 +254,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                        <p style="color:#d99879">Created By <span style="color:#f4cca4"><b>Omar Reda</b></span> 2021 &
+                        <p style="color:#d99879">Created By <span style="color:#f4cca4"><b>Yao kouassi joel</b></span> 2024 &
                             All Rights Reserved.</p>
                     </div>
                     <div class="col-xs-12 col-sm-6 text-right">
